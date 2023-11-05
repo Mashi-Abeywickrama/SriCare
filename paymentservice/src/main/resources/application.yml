@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: payment-service
+server:
+  servlet:
+    context-path: /payment-service
+  port: 8003
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    hostname: ${COMPUTERNAME}  

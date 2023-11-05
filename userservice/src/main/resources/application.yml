@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: service-user
+datasource:
+  url: jdbc:postgresql://localhost:5432/sricareusers
+  username: postgres
+  password: inspireinteriors
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  servlet:
+    context-path: /service-user
+  port: 8001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    hostname: ${COMPUTERNAME}
+
+
