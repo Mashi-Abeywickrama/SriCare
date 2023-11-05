@@ -12,12 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@CrossOrigin(origins = "http://localhost:3000")
 
-@RestController
 public class UserController {
 
-    @Autowired UserService userService;
+  @Autowired
+    private UserService userService;
 
     @PostMapping("/register")
     public ResponseEntity<User> registerUser(@RequestBody RegisterRequest request) {
@@ -80,7 +79,7 @@ public class UserController {
         }
     }
 
-    private static class LoginRequest{
+    static class LoginRequest{
         private String userName;
         private String password;
 
