@@ -20,11 +20,11 @@ spring:
         predicates:
         - Path=/service-user/***
       - id: serviceTwo
-        uri: lb://MICROSERVICE-TWO
+        uri: lb://EMAIL-SERVICE
         predicates:
-        - Path=/service-two/***     
+        - Path=/email-service/***
       - id: serviceThree
-        uri: lb://MICROSERVICE-THREE
+        uri: lb://PAYMENT-SERVICE
         predicates:
-        - Path=/service-three/***   
+        - Path=/payment-service/***
 
